@@ -1,16 +1,13 @@
 import { useTranslation } from 'react-i18next'
 import './App.css'
-import LanguageSelector from './components/LanguageSelector';
+import Navbar from './components/Navbar';
+import Login from './components/Login/Login';
 
 function App() {
-  const {t}=useTranslation();
   return (
-    <div className='container'>
-      <LanguageSelector/>
-      <p>Paragraph:{t("enterCredentials")}</p>
-      <h1>Username:{t("username")}</h1>
-      <h2>Password:{t("password")}</h2>
-      <button>{t("signIn")}</button>
+    <div className='App'>
+    <Navbar/>
+    <Login/>
     </div>
   )
 }
